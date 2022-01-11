@@ -5,6 +5,7 @@ import {
   useWindowSize,
   useMeasure
 } from '../hooks'
+import { MOBILE_SIZE } from '../constants'
 
 export const Main = () => {
   const { width, setWidth } = useWindowSize()
@@ -19,7 +20,7 @@ export const Main = () => {
       className="mt-5 w-full" 
       ref={myRef}
     >
-      <Card {...MAIN_ARTICLE} row={width > 1050} />
+      <Card {...MAIN_ARTICLE} row={width > MOBILE_SIZE} />
       <div className="article-grid">
         {ARTICLES.map((article, index: number) => (
           <Card 
