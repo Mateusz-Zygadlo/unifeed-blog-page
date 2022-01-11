@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply border-b mx-3 hover:border-black transition-colors duration-500 cursor-pointer;
+  }
+  .mobile-nav-link {
+    @apply nav-link text-5xl my-4;
+  }
+}
